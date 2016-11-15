@@ -1,0 +1,46 @@
+.cognition
+	&__heading
+		margin-bottom 45px
+
+.cognition-lane
+	&__progress
+		position relative
+		cursor pointer
+		sprite $cognition_progress
+	&__pointer
+		position absolute
+		sprite $cognition_pointer
+		cursor pointer
+		top -18px
+		left -6px
+	&__list
+		display flex
+		width 769px
+	&__item
+		position relative
+		flex .4
+		&:before
+			position absolute
+			content ''
+			top -1px
+	&__item:nth-child(1):before
+		left 0
+		sprite $cognition_anchor_b
+	&__item:nth-child(2):before,
+	&__item:nth-child(3):before
+		left 0
+		sprite $cognition_anchor_s
+	&__item:nth-child(4)
+		text-align right
+		&:before
+			right 0
+			sprite $cognition_anchor_b
+	&__anchor
+		display block
+		text-decoration none
+		color headline
+		font-weight bold
+		font-size 13px
+		margin-top 26px
+		line-height 18px
+		user-select none

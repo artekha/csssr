@@ -1,0 +1,94 @@
+body
+  background #797979
+  font-family ptsans
+
+*::selection
+    color #fff
+    background headline
+
+.input
+  height 40px
+  padding 0 15px 10px
+  font-family courier
+  font-size 30px
+  color headline
+  border none
+  background url('../images/sprites/input.png') bottom left repeat-x
+  &::placeholder
+    color rgba(47,27,21,.5)
+    transition color .2s
+  &:focus::placeholder
+    color rgba(47,27,21,0)
+
+.textarea
+  size(100%, 180px)
+  padding 0 5px 0
+  font-family courier
+  font-size 30px
+  color headline
+  line-height 60px
+  border none
+  background url('../images/sprites/input.png') bottom left repeat-y
+  -webkit-appearance none
+  &::placeholder
+    color rgba(47,27,21,.5)
+    transition color .2s
+  &:focus::placeholder
+    color rgba(47,27,21,0)
+
+.checkbox
+  &__label
+    position relative
+    padding-left 29px
+    line-height 25px
+    cursor pointer
+    user-select none
+    font-size 20px
+    font-weight bold
+    letter-spacing .6px
+    display inline-block
+    &:before
+      position absolute
+      content ''
+      top 4px
+      left 1px
+      size(18px)
+      background url('../images/sprites/checkbox.png')
+  &__input
+    display none
+  &__input:checked + &__label:before
+    background-position -18px 0
+
+.radio
+  &__label
+    position relative
+    padding-left 34px
+    line-height 28px
+    cursor pointer
+    user-select none
+    font-size 18px
+    font-weight bold
+    letter-spacing 1px
+    display inline-block
+    &:before
+      position absolute
+      content ''
+      top 0px
+      left 0px
+      size(28px)
+      background url('../images/sprites/radio.png')
+  &__input
+    display none
+  &__input:checked + &__label:before
+    background-position -28px 0
+
+.heading
+  color headline
+  font-weight bold
+  font-size 22px
+  letter-spacing 1px
+
+.description
+  color plain
+  font-size 15px
+  line-height 23px

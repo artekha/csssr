@@ -1,0 +1,13 @@
+mixin radio(name, val, parent)
+	.radio(class=parent)
+		input(type="radio" name="prospect" id=name).radio__input
+		label(for=name).radio__label= val
+.prospect
+	h2.heading.prospect__heading Какие у вас планы на будущее?
+	.description.prospect__description.
+		Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+	.prospect-list
+		+radio('layout', 'Верстать', 'prospect-list__radio')
+		+radio('js', 'Прокачиваться в JS', 'prospect-list__radio')
+		+radio('managering', 'Менеджерство', 'prospect-list__radio')
+		+radio('other', 'Другое', 'prospect-list__radio')

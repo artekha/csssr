@@ -1,0 +1,10 @@
+mixin entry-field(name, own, val, pl, parent)
+	.entry-field(class=parent)
+		label(for=own).entry-field__label= name
+		input(id=own placeholder=pl value=val autocomplete="off").input.entry-field__input
+.summary
+	+entry-field('Полное ФИО', 'name', 'Артеха Андрей Вадимович', 'Иванов Иван Иванович', 'summary__field')
+	+entry-field('Год рождения', 'year', '1997', '1990', 'summary__field')
+	+entry-field('Место жительства', 'place', 'г. Мелитополь, Украина', 'г. Иваново, Россия', 'summary__field')
+	+entry-field('Скайп', 'skype', 'andrey.artekha', 'ivanov', 'summary__field')
+	+entry-field('Почта', 'email', 'andrewartekha@gmail.com', 'ivanov@gmail.com', 'summary__field')

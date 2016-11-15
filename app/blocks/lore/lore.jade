@@ -1,0 +1,35 @@
+mixin checkbox(name, val, parent)
+	.checkbox(class=parent)
+		input(type="checkbox" name=name id=name).checkbox__input
+		label(for=name).checkbox__label= val
+.lore
+	h2.heading.lore__heading Расскажите о себе чекбоксами
+	.description.lore__description.
+		Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+	.lore-list
+		.lore-list__section
+			+checkbox('methodology', 'БЭМ/OOCSS', 'lore-list__checkbox')
+			+checkbox('template', 'Pug (Jade)', 'lore-list__checkbox')
+			+checkbox('preprocessor', 'Stylus/LESS/SASS', 'lore-list__checkbox')
+			+checkbox('svg', 'Работаю с SVG', 'lore-list__checkbox')
+			+checkbox('semantic', 'Верстаю семантично', 'lore-list__checkbox')
+			+checkbox('accessibility', 'Accessibility (A11Y)', 'lore-list__checkbox')
+			+checkbox('ecmascript', 'ES2015/ES2016', 'lore-list__checkbox')
+		.lore-list__section
+			+checkbox('build', 'Gulp/GRUNT', 'lore-list__checkbox')
+			+checkbox('webpack', 'Webpack', 'lore-list__checkbox')
+			+checkbox('webgl', 'Дружу с WebGL', 'lore-list__checkbox')
+			+checkbox('jquery', 'jQuery', 'lore-list__checkbox')
+			+checkbox('angular', 'Знаю/изучаю Angular', 'lore-list__checkbox')
+			+checkbox('react', 'Знаю/изучаю React', 'lore-list__checkbox')
+			+checkbox('nodejs', 'Знаю/изучаю Node.js', 'lore-list__checkbox')
+		.lore-list__section
+			+checkbox('git', 'Использую Git', 'lore-list__checkbox')
+			+checkbox('accurate', 'С глазомером всё ок', 'lore-list__checkbox')
+			.checkbox.lore-list__checkbox
+				input(type="checkbox" name="blog" id="blog").checkbox__input
+				label(for="blog").checkbox__label
+					| Читаю
+					a(href="http://blog.csssr.ru/" target="_blank").lore-list__link blog.csssr.ru
+			+checkbox('lazy', 'Я ленивый(-ая)', 'lore-list__checkbox')
+			+checkbox('english', 'У меня хороший английский', 'lore-list__checkbox')
