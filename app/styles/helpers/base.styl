@@ -19,15 +19,18 @@ body
     transition color .2s
   &:focus::placeholder
     color rgba(47,27,21,0)
+    transition color .2s
 
 .textarea
-  size(100%, 180px)
+  width 100%
+  height 180px
   padding 0 5px 0
   font-family courier
   font-size 30px
   color headline
   line-height 60px
   border none
+  resize none
   background url('../images/sprites/input.png') bottom left repeat-y
   -webkit-appearance none
   &::placeholder

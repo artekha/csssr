@@ -1,12 +1,12 @@
-# CSSSR Project Template
-**Шаблон проекта для быстрого старта**
+# CSSSR test tase
+**Тестовое задание для компании csssr.ru**
 
 
 ## Старт проекта
 
 ### Склонируй репозиторий и перейди в папку проекта
 ```
-git clone git@github.com:CSSSR/csssr-project-template.git new-project && cd new-project
+git clone https://github.com/artekha/csssr new-project && cd new-project
 ```
 
 ### Установи модули
