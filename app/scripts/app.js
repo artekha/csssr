@@ -3,8 +3,10 @@ class NerrativeArea {
 	constructor(options) {
 
 		this.area = options.textarea;
-		this.area.style.height = `${this.area.scrollHeight}px`;
 		this.area.addEventListener('input', this.resizeArea.bind(this));
+		window.onload = () => {
+			this.area.style.height = `${this.area.scrollHeight}px`;
+		}
 
 	}
 
@@ -18,6 +20,7 @@ class NerrativeArea {
 			area.style.height = '180px';
 			if (area.scrollHeight > area.offsetHeight) area.style.height = `${area.scrollHeight}px`;
 		}
+		console.log(this.area.scrollHeight, this.area.offsetHeight);
 
 	}
 
@@ -42,6 +45,9 @@ class CognitionSlider {
 			return false;
 		};
 		this.pointer.addEventListener('mousedown', this.changeByDrag.bind(this));
+		document.onmouseup = () => {
+			this.pointer.classList.add('cognition-lane__pointer_animate');
+		}
 
 	}
 
@@ -91,6 +97,8 @@ class CognitionSlider {
 
 	changeByDrag(e) {
 
+		this.pointer.classList.remove('cognition-lane__pointer_animate');
+
 		e.preventDefault();
 
 		let pointerCoords = this._getCoords(this.pointer);
@@ -114,7 +122,7 @@ class CognitionSlider {
 
     }
 		document.onmouseup = (e) => {
-
+			this.pointer.classList.add('cognition-lane__pointer_animate');
 			e.stopImmediatePropagation();
 			document.onmousemove = document.onmouseup = null;
 			let width = this.line.offsetWidth;
@@ -158,7 +166,7 @@ class CognitionSlider {
 }
 
 const nerrativeArea = new NerrativeArea({
-	textarea: document.querySelector('textarea')
+	textarea: document.querySelector('.nerrative__textarea')
 });
 
 const cognitionSlider = new CognitionSlider({
